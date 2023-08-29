@@ -26,7 +26,6 @@ export const putDb = async (content) => {
     console.log('putDb done');
 }
 
-
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
   // set up varialbe to assign the database to
