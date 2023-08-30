@@ -1,15 +1,15 @@
 {
-  "name": "JATE",
+  "name": "jate",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start:dev": "",
-    "start": "",
-    "server": "",
-    "build": "",
-    "install": "",
-    "client": ""
+    "start:dev": "concurrently \"npm run server\" \"npm run dev --prefix client\"",
+    "start": "concurrently \"npm run start-server\" \"npm run start-client\"",
+    "server": "nodemon server.js --ignore client",
+    "build": "npm run build --prefix client",
+    "install": "npm install --prefix client",
+    "client": "npm run client --prefix client"
   },
   "keywords": [],
   "author": "",
